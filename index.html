@@ -24,7 +24,7 @@
     <div class="container">
         <div class="card">
             
-                <img :src="slides[activeImage].image" alt="" class="bigImage">
+                <img :src="slides[activeImage].image" alt="" class="bigImage" @mouseenter="isHovering = true" @mouseleave="isHovering = false">
     
             
 

@@ -17,6 +17,8 @@ createApp({
 
 
         return {
+            
+            isHovering: false,
 
             activeImage: 0,
 
@@ -71,8 +73,10 @@ createApp({
             }
         },
         auto(){
-            setInterval(() => {
-                this.next();
+            this.intervalId = setInterval(() => {
+                if (!this.isHovering) {
+                    this.next();
+                }
             }, 3000);
         }
     }
