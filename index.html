@@ -35,13 +35,16 @@
                 <small>{{slides[activeImage].text}}</small>
             </div>
             <div class="thumbnails">
-                <img src="./img/01.webp" class="thumb" @click="activeImage=0">
+                <!-- <img src="./img/01.webp" class="thumb" @click="activeImage=0">
                 <img src="./img/02.webp" class="thumb" @click="activeImage=1">
                 <img src="./img/03.webp" class="thumb" @click="activeImage=2">
                 <img src="./img/04.webp" class="thumb" @click="activeImage=3">
-                <img src="./img/05.webp" class="thumb" @click="activeImage=4">
+                <img src="./img/05.webp" class="thumb" @click="activeImage=4"> -->
+
+                <img v-for="slide in slides " :src="slide.image" class="thumb" @click="activeImage= slide.id">
 
 
+                
             </div>
             
 
