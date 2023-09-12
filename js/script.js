@@ -10,7 +10,17 @@ let activeImage = 0;
 
 const { createApp } = Vue
 
+
 createApp({
+
+
+
+    mounted() {
+        this.auto()
+      
+    },
+
+    
     data() {
 
 
@@ -81,7 +91,7 @@ createApp({
         }
     }
 
-
+  
 
 }).mount('#app')
 
