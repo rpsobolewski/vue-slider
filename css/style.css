@@ -63,3 +63,9 @@
   .active {
     border: 4px solid cornflowerblue;
   }
+
+  .bigImage{
+    height: 380px;
+    width: 380px;
+    object-fit: fill;
+  }
