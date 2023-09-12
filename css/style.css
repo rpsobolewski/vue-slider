@@ -2,104 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.container {
-    height: 100vh;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #0d1627;
+    text-shadow: 0 0 2px;
+  }
+  
+  .container {
+    width: 70%;
+    max-width: 380px;
+    margin: 2rem auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.item {
-    float: left;
-    width: 700px;
-    height: 300px;
+  }
+  
+  .card {
+    border: 1px solid lightgray;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 0 10px #ababab;
     position: relative;
-}
-
-.item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.item .text {
+  }
+  
+  .movie .details {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .navigator {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
-    color: white;
-}
-
-.thumbs {
-    float: left;
-    height: 300px;
-    background: #000;
-    position: relative;
-}
-
-.thumb {
-    height: calc((300px) / 5);
-    opacity: 0.5;
-}
-
-.thumb img {
+    top: 40%;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.thumb.active {
-    border: 2px solid #ccc;
-    opacity: 1;
-}
-
-.prev, .next {
-    width: 20px;
-    height: 20px;
-    margin: 10px 0;
-    border-radius: 50%;
-    background: #ccc;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+  }
+  
+  .prev,
+  .next {
+    background-color: rgba(255, 255, 255, 0.881);
+    padding: 0.5rem;
     cursor: pointer;
-    z-index: 999;
-}
-
-.next {
-    bottom: 0;
-}
-
-/*
-EXTRA: in questo esempio gli accordion vengono creati
-usando 2 bordi di un quadratino ruotato di 45 gradi
-In una versione base si possono usare delle icone
-oppure i caratteri ∧ (&and;) e ∨ (&or;)
- */
-.prev::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(-45deg);
-}
-
-.next::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    display: block;
-    position: absolute;
-    bottom: 35%;
-    left: 50%;
-    transform: translate(-50%) rotate(135deg);
-}
+  }
+  
+  .thumbnails {
+    display: flex;
+  }
+  
+  .thumbnails .thumb {
+    width: calc(100% / 5);
+    flex-wrap: wrap;
+  }
+  
+  .active {
+    border: 4px solid cornflowerblue;
+  }
